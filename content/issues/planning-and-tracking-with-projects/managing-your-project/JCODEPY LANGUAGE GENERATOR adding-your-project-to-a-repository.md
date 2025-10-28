@@ -1,4 +1,36 @@
----
+---<!DOCTYPE html>
+<html>
+<head>
+  <title>JCodePy Code Generator</title>
+</head>
+<body>
+  <h1>Welcome to JCodePy Code Generator</h1>
+  
+  <form id="codeForm">
+    <label for="variableName">Enter Variable Name:</label>
+    <input type="text" id="variableName" name="variableName"><br>
+    
+    <label for="variableValue">Enter Variable Value:</label>
+    <input type="text" id="variableValue" name="variableValue"><br>
+    
+    <button type="button" onclick="generateCode()">Generate Code</button>
+  </form>
+  
+  <h2>Generated JCodePy:</h2>
+  <pre id="generatedCode"></pre>
+  
+  <script>
+    function generateCode() {
+      var variableName = document.getElementById("variableName").value;
+      var variableValue = document.getElementById("variableValue").value;
+      
+      var jcodepyCode = "<and> set " + variableName + " /000*** " + variableValue + "</and>]";
+      
+      document.getElementById("generatedCode").innerText = jcodepyCode;
+    }
+  </script>
+</body>
+</html>
 title: 'Adding your {% data variables.projects.project_v2 %} to a repository'
 shortTitle: 'Adding a {% data variables.projects.project_v2 %} to a repo'
 intro: 'You can add your {% data variables.projects.project_v2 %} to a repository to make it accessible from that repository.'
